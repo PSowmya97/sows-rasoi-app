@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sow's Rasoi — Indian Recipe Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">✦ Indian Vegetarian Kitchen</div>
+  <h1>Sow's <span>Rasoi</span></h1>
+  <p class="hero-sub">Type any ingredients — get authentic Indian recipes with pictures</p>
+
+  <div class="tabs-row">
+    <button class="tab-btn active" data-tab="breakfast" onclick="setTab(this)">🌅 Breakfast</button>
+    <button class="tab-btn" data-tab="lunch"     onclick="setTab(this)">☀️ Lunch</button>
+    <button class="tab-btn" data-tab="snacks"    onclick="setTab(this)">🍘 Snacks</button>
+    <button class="tab-btn" data-tab="dinner"    onclick="setTab(this)">🌙 Dinner</button>
+    <button class="tab-btn" data-tab="any"       onclick="setTab(this)">🍽️ Any Meal</button>
+  </div>
+
+  <div class="search-wrap">
+    <div class="search-box">
+      <input class="search-input" id="searchInput" type="text"
+        placeholder="e.g. groundnuts, rice, potato, paneer..." autocomplete="off"
+        oninput="handleInput()" />
+      <button class="clear-btn" id="clearBtn" onclick="clearSearch()" title="Clear">✕</button>
+      <button class="search-btn" id="searchBtn" onclick="findRecipes()">Find Recipes ✦</button>
+    </div>
+    <div class="ac-dropdown" id="acDropdown"></div>
+    <div class="suggestions">
+      <button class="sug-chip" onclick="quickSearch('groundnuts')">groundnuts</button>
+      <button class="sug-chip" onclick="quickSearch('paneer, tomato')">paneer</button>
+      <button class="sug-chip" onclick="quickSearch('rice, dal')">rice + dal</button>
+      <button class="sug-chip" onclick="quickSearch('besan, onion')">besan</button>
+      <button class="sug-chip" onclick="quickSearch('banana')">banana</button>
+      <button class="sug-chip" onclick="quickSearch('poha')">poha</button>
+      <button class="sug-chip" onclick="quickSearch('potato')">potato</button>
+      <button class="sug-chip" onclick="quickSearch('bread')">bread</button>
+    </div>
+  </div>
+</div>
+
+<!-- FAVORITES -->
+<div class="fav-strip" id="favStrip">
+  <div class="fav-strip-label">★ Saved Recipes</div>
+  <div class="fav-chips" id="favChips"></div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main id="main">
+  <div class="state-box">
+    <span class="state-icon">🧑‍🍳</span>
+    <h2>What's in your kitchen?</h2>
+    <p>Type any ingredients above and tap <strong style="color:var(--gold)">Find Recipes</strong><br>
+    to discover delicious Indian dishes you can make right now.</p>
+  </div>
+</main>
+
+<script src="recipes.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
