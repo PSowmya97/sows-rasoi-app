@@ -98,7 +98,7 @@ const DB = {
       description:"Golden deep-fried puffed wheat discs — festive, fluffy and irresistible.",
       prepTime:"20 mins", cookTime:"15 mins", servings:4,
       image:"https://images.unsplash.com/photo-1643892467625-65df6a500524?w=600&q=80",
-      keywords:["puri","wheat flour","atta","deep fried","aloo sabzi","bhaji","puffed bread"],
+      keywords:["puri","wheat flour","atta","deep fried","aloo sabzi","bhaji"],
       ingredients:["2 cups whole wheat flour (atta)","½ tsp salt","½ tsp ajwain (carom seeds)","1 tsp oil","Water to knead","Oil for deep frying"],
       steps:["Mix flour, salt, ajwain. Add oil and rub into flour.","Add water little by little — knead to a stiff, smooth dough.","Rest 15 mins. Divide into small balls.","Roll each ball into small circles (~4 inches), applying light oil.","Heat oil for deep frying on medium-high.","Slide puri in. Press gently with ladle — it puffs up. Flip after 20 secs. Drain and serve hot."],
       tip:"Stiff dough = puffy puris. Soft dough makes them oily and flat."
