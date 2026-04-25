@@ -176,7 +176,7 @@ function findRecipes() {
     (DB[cat] || []).forEach(recipe => {
       let score = 0;
       userIngredients.forEach(ing => {
-        if (recipe.keywords.some(k => k.includes(ing) || ing.includes(k))) score++;
+        if (recipe.keywords.some(k => k.includes(ing))) score++;
         if (recipe.name.toLowerCase().includes(ing)) score += 2;
       });
       if (score > 0) all.push({ ...recipe, score, cat });
